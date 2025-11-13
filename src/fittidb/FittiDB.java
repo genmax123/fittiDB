@@ -17,7 +17,9 @@ public class FittiDB {
         // TODO code application logic here
     System.out.println("Hallo Welt");
         System.out.println("Hallo from NB-Max-02");
+        System.out.println("Hallo from back from GitHub Web");
     }
     
 }
+
 
