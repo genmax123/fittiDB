@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- XML Header -->
+
+<?import javafx.scene.control.*?>      <!-- Controls -->
+<?import javafx.scene.layout.*?>       <!-- Layouts -->
+<?import javafx.geometry.Insets?>      <!-- Insets -->
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="de.genrichgolzsch.fittidb.controller.MembershipsController"> <!-- Root -->
+
+    <top> <!-- Header -->
+        <HBox spacing="10"> <!-- Header Box -->
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="← Zurück" onAction="#onBack"/> <!-- Back -->
+            <Label text="Memberships" style="-fx-font-size: 18px; -fx-font-weight: bold;"/> <!-- Title -->
+            <Region HBox.hgrow="ALWAYS"/> <!-- Spacer -->
+            <Button text="Refresh" onAction="#onRefresh"/> <!-- Refresh -->
+        </HBox>
+    </top>
+
+    <center> <!-- Content -->
+        <VBox spacing="10"> <!-- Main VBox -->
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <TableView fx:id="tvMemberships" prefHeight="520"> <!-- Memberships Table -->
+                <columns> <!-- Columns -->
+                    <TableColumn fx:id="colMembershipId" text="ID" prefWidth="70"/> <!-- membership_id -->
+                    <TableColumn fx:id="colPersonsId" text="Person ID" prefWidth="90"/> <!-- persons_id -->
+                    <TableColumn fx:id="colPlanId" text="Plan ID" prefWidth="80"/> <!-- plan_id -->
+                    <TableColumn fx:id="colStartDate" text="Startdatum" prefWidth="140"/> <!-- start_date -->
+                    <TableColumn fx:id="colActive" text="Aktiv" prefWidth="80"/> <!-- active -->
+                </columns>
+            </TableView>
+
+            <HBox spacing="10"> <!-- Action Row -->
+                <Label fx:id="lblStatus" text="" wrapText="true"/> <!-- Status -->
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

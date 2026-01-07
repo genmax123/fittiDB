@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- XML Header -->
+
+<?import javafx.scene.control.*?>      <!-- Controls -->
+<?import javafx.scene.layout.*?>       <!-- Layouts -->
+<?import javafx.geometry.Insets?>      <!-- Insets -->
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="de.genrichgolzsch.fittidb.controller.CoursesController"> <!-- Root -->
+
+    <top> <!-- Header -->
+        <HBox spacing="10"> <!-- Header Box -->
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="← Zurück" onAction="#onBack"/> <!-- Back -->
+            <Label text="Courses" style="-fx-font-size: 18px; -fx-font-weight: bold;"/> <!-- Title -->
+            <Region HBox.hgrow="ALWAYS"/> <!-- Spacer -->
+            <Button text="Refresh" onAction="#onRefresh"/> <!-- Refresh -->
+        </HBox>
+    </top>
+
+    <center> <!-- Content -->
+        <VBox spacing="10"> <!-- Main VBox -->
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <TableView fx:id="tvCourses" prefHeight="520"> <!-- Courses Table -->
+                <columns> <!-- Columns -->
+                    <TableColumn fx:id="colId" text="ID" prefWidth="60"/> <!-- ID -->
+                    <TableColumn fx:id="colName" text="Kursname" prefWidth="220"/> <!-- Name -->
+                    <TableColumn fx:id="colMax" text="Max" prefWidth="80"/> <!-- Max -->
+                    <TableColumn fx:id="colDesc" text="Beschreibung" prefWidth="520"/> <!-- Desc -->
+                </columns>
+            </TableView>
+
+            <HBox spacing="10"> <!-- Action Row -->
+                <Button text="Kursübersicht-PDF" onAction="#onExportCourseOverviewPdf"/> <!-- PDF -->
+                <Region HBox.hgrow="ALWAYS"/> <!-- Spacer -->
+                <Label fx:id="lblStatus" text="" wrapText="true"/> <!-- Status -->
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

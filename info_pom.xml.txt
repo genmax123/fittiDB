@@ -1,0 +1,2 @@
+pom.xml ist die Projekt-Konfigurationsdatei von Maven.
+Sie legt fest, welche Bibliotheken (z. B. JavaFX, SQLite) verwendet werden und wie das Java-Projekt gebaut und gestartet wird.

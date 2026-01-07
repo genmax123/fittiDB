@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- XML Header -->
+
+<?import javafx.geometry.Insets?>      <!-- Insets -->
+<?import javafx.scene.control.*?>      <!-- Controls -->
+<?import javafx.scene.layout.*?>       <!-- Layouts -->
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="de.genrichgolzsch.fittidb.controller.DashboardController"> <!-- Root -->
+
+    <top> <!-- Kopfbereich -->
+        <HBox spacing="10"> <!-- Header Box -->
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Label text="FittiDB Dashboard" style="-fx-font-size: 18px; -fx-font-weight: bold;"/> <!-- Titel -->
+            <Region HBox.hgrow="ALWAYS"/> <!-- Spacer -->
+            <Button text="Logout" onAction="#onLogout"/> <!-- Logout -->
+        </HBox>
+    </top>
+
+    <center> <!-- Hauptbereich -->
+        <VBox> <!-- Content Box -->
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Label text="Willkommen! Wähle einen Bereich:"/> <!-- Info -->
+
+            <HBox spacing="10"> <!-- Button Row -->
+                <Button text="Persons" onAction="#onOpenPersons"/> <!-- Persons -->
+                <Button text="Courses" onAction="#onOpenCourses"/> <!-- Courses -->
+                <Button text="Memberships" onAction="#onOpenMemberships"/> <!-- Memberships -->
+                <Button text="User &amp; Rollen" onAction="#openUserRoles"/> <!-- User and Roles -->
+
+            </HBox>
+
+            <Label fx:id="lblInfo" text="" wrapText="true"/> <!-- Status/Info -->
+        </VBox>
+    </center>
+
+</BorderPane>

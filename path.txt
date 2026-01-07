@@ -1,0 +1,56 @@
+fittidb/
+├─ pom.xml
+├─ data/
+│  └─ fittidb.db
+└─ src/
+   └─ main/
+      ├─ java/
+      │  └─ de/
+      │     └─ genrichgolzsch/
+      │        └─ fittidb/
+      │           ├─ app/
+      │           │  └─ MainApp.java
+      │           │
+      │           ├─ db/
+      │           │  └─ DBConnection.java
+      │           │
+      │           ├─ model/
+      │           │  ├─ Role.java
+      │           │  ├─ User.java
+      │           │  ├─ Person.java
+      │           │  ├─ HealthData.java
+      │           │  ├─ MembershipPlan.java
+      │           │  ├─ Membership.java
+      │           │  ├─ Course.java
+      │           │  └─ CourseBooking.java
+      │           │
+      │           ├─ dao/
+      │           │  ├─ UserDao.java
+      │           │  ├─ PersonDao.java
+      │           │  ├─ HealthDataDao.java
+      │           │  ├─ MembershipPlanDao.java
+      │           │  ├─ MembershipDao.java
+      │           │  ├─ CourseDao.java
+      │           │  └─ CourseBookingDao.java
+      |           |  |_  RoleDao.java
+      │           │
+      │           ├─ service/
+      │           │  ├─ AuthService.java
+      │           │  ├─ PersonService.java
+      │           │  └─ ExportPdfService.java
+      │           │
+      │           └─ controller/
+      │              ├─ LoginController.java
+      │              ├─ DashboardController.java
+      │              ├─ PersonsController.java
+      │              └─ CoursesController.java
+      │
+      └─ resources/
+         └─ de/
+            └─ genrichgolzsch/
+               └─ fittidb/
+                  └─ view/
+                     ├─ login.fxml
+                     ├─ dashboard.fxml
+                     ├─ persons.fxml
+                     └─ courses.fxml
